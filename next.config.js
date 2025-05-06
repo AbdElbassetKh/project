@@ -7,7 +7,7 @@ const nextConfig = {
   images: { unoptimized: true },
   experimental: {
     fontLoaders: [
-      { loader: 'default', options: { timeout: 30000 } }
+      { loader: 'default', options: { timeout: 60000 } }
     ]
   }
 };
