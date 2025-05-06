@@ -12,7 +12,13 @@ const nextConfig = {
     ignoreDuringBuilds: true
   },
   trailingSlash: true,
-  reactStrictMode: true
+  reactStrictMode: true,
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.output.pathinfo = false;
+    }
+    return config;
+  }
 };
 
 module.exports = nextConfig;
